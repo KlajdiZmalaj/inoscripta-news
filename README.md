@@ -54,3 +54,12 @@ Write these commands in project terminal to build / stop the app (you can use Ma
      ├  [JS] index.js   
      └
 </pre>
+
+# Other info:
+
+Some apis do not support all the filters queries (it is not bcz of the queries but it is missing on the API docs)
+
+- Search by title works on all
+- Date From/To works on all
+- Categories works with NYT
+- Author works with NYT (tag: contributor/test) and NYT
