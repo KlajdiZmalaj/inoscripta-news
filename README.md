@@ -10,6 +10,8 @@ Write these commands in project terminal to build / stop the app (you can use Ma
 
 - `make stop`
 
+## [Online Version Vercel](https://inoscripta-news.vercel.app/).
+
 # Tools used:
 
 - Docker + docker-compose + Makefile
