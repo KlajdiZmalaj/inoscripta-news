@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/inoscripta-news/static/css/main.01cf17dc.css",
+    "main.js": "/inoscripta-news/static/js/main.1e55e8c6.js",
+    "static/media/logo.png": "/inoscripta-news/static/media/logo.c5a98cff79e856087d21.png",
+    "index.html": "/inoscripta-news/index.html",
+    "main.01cf17dc.css.map": "/inoscripta-news/static/css/main.01cf17dc.css.map",
+    "main.1e55e8c6.js.map": "/inoscripta-news/static/js/main.1e55e8c6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.01cf17dc.css",
+    "static/js/main.1e55e8c6.js"
+  ]
+}
