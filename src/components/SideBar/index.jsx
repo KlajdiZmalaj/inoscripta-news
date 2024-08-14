@@ -5,7 +5,7 @@ export default ({ handleChangeSideBar }) => {
   const { filters, handleFilterChange, handleSubmit } = useNewsContext();
   return (
     <>
-      <aside className="sidebar animate__animated animate__fadeInLeftBig">
+      <aside className="sidebar animate__animated animate__slideInLeft">
         <div className="col">
           <FilterBlock
             handleFilterChange={handleFilterChange}

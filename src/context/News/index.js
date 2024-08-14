@@ -24,7 +24,6 @@ const NewsProvider = ({ children }) => {
   const getData = useCallback(async () => {
     //query params filters we send to backend
     const params = generateApiParams(filters, filters["source"]);
-    // console.log("params", params);
 
     setLoading(true);
     setNewsData([]);

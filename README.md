@@ -1,6 +1,8 @@
 # How to use:
 
-Write these commands in project terminal to build / stop the app (you can use Makefile or just use docker cmds)
+Write these commands in project terminal to build / stop the app (you can use Makefile or just use docker cmds).
+
+After you run the app you will find some random news from the second source (default) but you can change and filter them from the menu on the left side
 
 ### Build and start the containers:
 
@@ -62,4 +64,4 @@ Some apis do not support all the filters queries (it is not bcz of the queries b
 - Search by title works on all
 - Date From/To works on all
 - Categories works with NYT
-- Author works with NYT (tag: contributor/test) and NYT
+- Author works with NYT fq: byline:(John)
