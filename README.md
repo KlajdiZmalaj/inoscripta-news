@@ -42,18 +42,18 @@ After you run the app you will find some random news from the second source (def
      ├  [DIR] components
      ├  [DIR] config 
      ├    ┬
-     ├    ├ [JS] api.js (news endpoints and query params)
-     ├    ├ [JS] utils.js (mappers and utils functions)
+     ├    ├ [JS] api.ts (news endpoints and query params)
+     ├    ├ [JS] utils.ts (mappers and utils functions)
      ├
      ├  [DIR] context/News 
      ├    ┬
      ├    ├ [DIR] News 
      ├        ┬
-     ├        ├ [JS] index.js (state managment and logic)
+     ├        ├ [JS] index.ts (state managment and logic)
      ├  [DIR] pages
      ├  [DIR] styles
-     ├  [JS] App.js
-     ├  [JS] index.js   
+     ├  [JS] App.ts
+     ├  [JS] index.ts   
      └
 </pre>
 
