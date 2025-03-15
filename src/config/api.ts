@@ -1,10 +1,11 @@
 import moment from "moment";
-export const generateApiParams = (filters, type) => {
+import { FiltersType } from "./types";
+export const generateApiParams = (filters: FiltersType, type: keyof typeof apis) => {
   const apis = {
     //Guardian api url + api_key + all params from guardian documentations
     guardian: {
       url: "https://content.guardianapis.com/search?",
-      "api-key": "633c84af-0182-44ff-a5fd-3e4d2b1ca14a",
+      "api-key": "80885092-60ad-4fc0-826c-91596fe5f1c7",
       "page-size": 20,
       format: "json",
       "show-elements": "image",
@@ -13,7 +14,7 @@ export const generateApiParams = (filters, type) => {
       // AUTHOR SEARCH QUERY on guardian tag=contributor/john-smith (this filter params doesnt work well with guardian api)
       tag: filters["author"] ? `contributor/${filters["author"]}` : "",
       "show-tags": "contributor",
-
+      category: filters["category"],
       "from-date": filters["startDate"] ? moment(filters["startDate"]).format("YYYY-MM-DD") : "",
       "to-date": filters["endDate"] ? moment(filters["endDate"]).format("YYYY-MM-DD") : "",
     },
@@ -24,7 +25,7 @@ export const generateApiParams = (filters, type) => {
       q: filters["search"],
       // AUTHOR SEARCH QUERY on nyt fq=byline:("John")
       fq: filters["author"] ? `byline:(${filters["author"]})` : "",
-
+      category: filters["category"],
       begin_date: filters["startDate"] ? moment(filters["startDate"]).format("YYYYMMDD") : "",
       end_date: filters["endDate"] ? moment(filters["endDate"]).format("YYYYMMDD") : "",
     },

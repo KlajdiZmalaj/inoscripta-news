@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
-import NewsProvider from "./context/News";
+import NewsProvider from "./context/News/index";
 import "react-datepicker/dist/react-datepicker.css";
 
 function App() {

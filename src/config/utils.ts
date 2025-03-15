@@ -1,20 +1,19 @@
-export const newsMapper = (newsData = [], type) => {
+import { GuardianModel, NewsDataType, NewsModel, NYTModel } from "./types";
+
+export const newsMapper = (newsData: NewsDataType[], type: "guardian" | "nyt" | "news") => {
   switch (type) {
     case "guardian":
-      return newsData.map((news) => guardianModel(news));
-      break;
+      return (newsData || []).map((news: GuardianModel) => guardianModel(news));
     case "nyt":
-      return newsData.map((news) => nytModel(news));
-      break;
+      return (newsData || []).map((news: NYTModel) => nytModel(news));
     case "news":
-      return newsData.map((news) => newsModel(news));
-      break;
+      return (newsData || []).map((news: NewsModel) => newsModel(news));
     default:
-      break;
+      return [];
   }
 };
 
-const nytModel = (newsData = {}) => {
+const nytModel = (newsData: NYTModel) => {
   return {
     id: newsData._id,
     date: newsData.pub_date,
@@ -32,7 +31,7 @@ const nytModel = (newsData = {}) => {
   };
 };
 
-const guardianModel = (newsData = {}) => {
+const guardianModel = (newsData: GuardianModel) => {
   return {
     id: newsData.id,
     date: newsData.webPublicationDate,
@@ -44,7 +43,7 @@ const guardianModel = (newsData = {}) => {
   };
 };
 
-const newsModel = (newsData = {}) => {
+const newsModel = (newsData: NewsModel) => {
   return {
     id: newsData.id,
     date: newsData.publishedAt,
@@ -56,6 +55,8 @@ const newsModel = (newsData = {}) => {
   };
 };
 
-const joinStrings = (items) => {
-  return items.filter((i) => i).join(" ");
+export type NewsModelType = ReturnType<any>; //TODO : add type return of all newsModel | nytModel | guardianModel
+
+const joinStrings = (items: any) => {
+  return items.filter((i: any) => i).join(" ");
 };

@@ -1,5 +1,10 @@
 import moment from "moment";
-const NewsComponent = ({ news = {}, loader }) => {
+import { NewsModelType } from "../../config/utils";
+type PropTypes = {
+  loader?: boolean;
+  news?: NewsModelType;
+};
+const NewsComponent = ({ news = {}, loader }: PropTypes) => {
   return (
     <a target="_blank" href={news.link} className={`news-card${loader ? " isLoading" : ""}`}>
       <img loading="lazy" src={news.image} alt="" />

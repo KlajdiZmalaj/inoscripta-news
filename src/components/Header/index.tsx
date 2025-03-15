@@ -2,6 +2,7 @@ import "./styles.scss";
 import logo from "../../assets/logo.png";
 import { useState } from "react";
 import SideBar from "../SideBar";
+
 const Header = () => {
   const [sideBar, setSideBar] = useState(false);
 
