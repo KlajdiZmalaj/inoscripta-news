@@ -61,7 +61,6 @@ After you run the app you will find some random news from the second source (def
 
 Some apis do not support all the filters queries (it is not bcz of the queries but it is missing on the API docs)
 
-- Search by title works on all
+- Search by keyword works on all
 - Date From/To works on all
 - Categories works with NYT
-- Author works with NYT fq: byline:(John)
