@@ -13,7 +13,7 @@ export const newsMapper = (newsData: NewsDataType[], type: "guardian" | "nyt" | 
   }
 };
 
-const nytModel = (newsData: NYTModel) => {
+const nytModel = (newsData: NYTModel): NewsModelType => {
   return {
     id: newsData._id,
     date: newsData.pub_date,
@@ -31,7 +31,7 @@ const nytModel = (newsData: NYTModel) => {
   };
 };
 
-const guardianModel = (newsData: GuardianModel) => {
+const guardianModel = (newsData: GuardianModel): NewsModelType => {
   return {
     id: newsData.id,
     date: newsData.webPublicationDate,
@@ -43,19 +43,31 @@ const guardianModel = (newsData: GuardianModel) => {
   };
 };
 
-const newsModel = (newsData: NewsModel) => {
+const newsModel = (newsData: NewsModel): NewsModelType => {
   return {
     id: newsData.id,
     date: newsData.publishedAt,
     source: newsData.source?.name,
     title: newsData.title,
-    author: newsData.author,
+    author: newsData?.author || "",
     link: newsData.url,
     image: newsData.urlToImage || "https://placehold.co/500x500",
   };
 };
 
-export type NewsModelType = ReturnType<any>; //TODO : add type return of all newsModel | nytModel | guardianModel
+/**
+ * Represents the common structure of a news item after mapping.
+ */
+export type NewsModelType = {
+  id: string;
+  date: string;
+  category?: string;
+  source?: string;
+  title: string;
+  author?: string;
+  link: string;
+  image: string;
+};
 
 const joinStrings = (items: any) => {
   return items.filter((i: any) => i).join(" ");

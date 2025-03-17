@@ -7,6 +7,7 @@ After you run the app you will find some random news from the second source (def
 ### Build and start the containers:
 
 - `make up`
+- `make start` -> open localhost:4000
 
 ### Stop the containers:
 

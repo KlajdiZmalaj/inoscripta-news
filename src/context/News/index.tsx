@@ -45,7 +45,7 @@ const NewsProvider = ({ children }: PropsWithChildren<Props>) => {
   const getData = useCallback(async () => {
     //query params filters we send to backend
     const setMockData = () => {
-      setNewsData(newsMapper(mockData?.data as NewsModelType[], "nyt")); //setting mock data instaead of read data (apis not working, so using mock data)
+      setNewsData(newsMapper(mockData?.data as unknown as NewsDataType[], "nyt")); //setting mock data instaead of read data (apis not working, so using mock data)
       setLoading(false);
     };
     try {
